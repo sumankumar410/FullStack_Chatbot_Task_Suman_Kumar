@@ -25,6 +25,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/enquiries", enquiryRoutes);
+app.use("/api/enquiry", enquiryRoutes);
+app.use("/enquiries", enquiryRoutes);
 
 app.use((req, res) => {
   res.status(404).json({
